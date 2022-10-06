@@ -6,19 +6,6 @@ import { ToDoListItem } from "../ToDoListItem";
 
 import styles from './ToDoList.module.css'
 
-const tasks = [
-  {
-    id: uuidv4(),
-    content: 'Lavar a louça',
-    isDone: false
-  },
-  {
-    id: uuidv4(),
-    content: 'Lavar a louça',
-    isDone: true
-  }
-]
-
 interface ToDoListItemProps {
   id: string;
   content: string;
@@ -56,7 +43,7 @@ export function ToDoList({}: ToDoListItemProps) {
   }
 
   function toggleTask(taskToToggle: string) {
-    const newTasks = taskList.map(task => {
+    const updatedTasks = taskList.map(task => {
       if (task.id === taskToToggle) {
         return {
           ...task,
@@ -65,7 +52,7 @@ export function ToDoList({}: ToDoListItemProps) {
       } return task
     })
 
-    setTaskList(newTasks)
+    setTaskList(updatedTasks)
   }
 
   function deleteTask(taskToDelete: string) {
