@@ -1,6 +1,5 @@
 <h1>
-    <img src="src/assets/Logo.svg" width="190px"/> <br>
-    ⠀⠀⠀⠀⠀⠀⠀⠀
+    <img src="src/assets/Logo.svg" width="190px"/>
 </h1>
 
 <h1>
